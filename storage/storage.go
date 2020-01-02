@@ -20,4 +20,6 @@ type DiskStorage interface {
 	Close() error
 	BackData(filePath string) error
 	LoadData(filePath, bkFilePath string) error
+	Lock()
+	UnLock()
 }

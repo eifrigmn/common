@@ -209,3 +209,11 @@ func (s *internalDB) LoadData(filePath, bkFilePath string) error {
 	//s.db.DropPrefix()
 	return os.Remove(bak.Name())
 }
+
+func (s *internalDB) Lock() {
+	s.db.Lock()
+}
+
+func (s *internalDB) UnLock(){
+	s.db.Unlock()
+}
